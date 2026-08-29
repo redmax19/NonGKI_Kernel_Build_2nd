@@ -77,7 +77,7 @@ runs:
           else
             cp /tmp/Patches/Patch/susfs_patch_to_${{ env.KERNEL_VERSION }}.patch ./
 
-            patch -p1 < susfs_patch_to_${{ env.KERNEL_VERSION }}.patch || true
+            patch -p1 -F3 < susfs_patch_to_${{ env.KERNEL_VERSION }}.patch || true
             echo "[+] SuSFS Patch completed."
 
           fi
