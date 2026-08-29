@@ -12,7 +12,7 @@ env:
   CUSTOM_CMDS : "CROSS_COMPILE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
 
-  KERNEL_SOURCE : "https://github.com/LineageOS/android_kernel_samsung_universal9830"
+  KERNEL_SOURCE : "https://github.com/r8ss/android_kernel_samsung"
   KERNEL_BRANCH : "lineage-23.2"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
