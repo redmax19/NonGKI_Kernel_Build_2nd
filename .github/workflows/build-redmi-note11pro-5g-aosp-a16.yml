@@ -9,8 +9,8 @@ env:
   DEVICE_NAME : "redmi_note_11_pro_5g"
   DEVICE_CODENAME : "veux"
 
-  CUSTOM_CMDS : "CROSS_COMPILE=aarch64-linux-gnu-"
-  EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
+  CUSTOM_CMDS: "CROSS_COMPILE=aarch64-linux-gnu-"
+  EXTRA_CMDS: "LLVM=1 LLVM_IAS=1 LD=ld.lld OBJDUMP=llvm-objdump"
 
   KERNEL_SOURCE : "https://github.com/r8ss/android_kernel_samsung"
   KERNEL_BRANCH : "lineage-23.2"
