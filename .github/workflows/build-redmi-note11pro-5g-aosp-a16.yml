@@ -15,7 +15,7 @@ env:
   KERNEL_SOURCE : "https://github.com/r8ss/android_kernel_samsung"
   KERNEL_BRANCH : "lineage-23.2"
 
-  CLANG_SOURCE : "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r522817.tar.gz"
+  CLANG_SOURCE : "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/7d21a2e4192728bc50841994d88637ccc45b5692/clang-r458507.tar.gz"
   CLANG_BRANCH : ""
 
   GCC_GNU : false
