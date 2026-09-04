@@ -85,7 +85,7 @@ env:
   SKIP_PATCH: "false" # Ignore errors found in Patch Debugger.
 
   BUILD_OTHER_CONFIG: "true" # Merge config files.
-  MERGE_CONFIG_FILES: "r8s.config"
+  MERGE_CONFIG_FILES: "c1s.config"
 
   FREE_MORE_SPACE: "false" # if u want get more space, enabled it.
 
