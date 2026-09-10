@@ -119,6 +119,7 @@ runs:
         shell: bash
         run: |
           cd $GITHUB_WORKSPACE/device_kernel/
+          curl -LSs "https://raw.githubusercontent.com/Poko-Apps/MemKernel/main/kernel/setup.sh" | bash -s M freea
 
           if [[ -z "${{ env.SUSFS_PATCH_FIXED }}" ]]; then
             echo "[-] You didn't provide any patch file."
