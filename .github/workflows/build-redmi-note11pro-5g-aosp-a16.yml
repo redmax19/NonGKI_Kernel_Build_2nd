@@ -12,8 +12,8 @@ env:
   CUSTOM_CMDS : "CROSS_COMPILE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
 
-  KERNEL_SOURCE : "https://github.com/r8ss/android_kernel_samsung"
-  KERNEL_BRANCH : "lineage-23.2"
+  KERNEL_SOURCE : "https://github.com/redmax19/990_upstream_v2"
+  KERNEL_BRANCH : "main"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
   CLANG_BRANCH : "lineage-20.0"
