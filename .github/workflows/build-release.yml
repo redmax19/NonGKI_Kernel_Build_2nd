@@ -48,6 +48,7 @@ jobs:
         | Device Name | Codename | Kernel | System | Android | Method | KernelSU | SUSFS | Re:Kernel | BBG | NoMount |
         |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
         | Google Pixel 3a | bonito | 4.9 | LineageOS 22.2 | 15 | AnyKernel3 | ReSukiSU | ✅ | ❌ | ❌ | ✅ |
+        | Google Pixel 4a | sunfish | 4.14 | AOSP Based | 13 | AnyKernel3 | ReSukiSU | ✅ | ✅ | ✅ | ✅ |
         | Nothing Phone (1) | spacewar | 5.4 | LineageOS 23.2 | 16 | AnyKernel3 | ReSukiSU | ✅ | ❌ | ❌ | ❌ |
         | OnePlus 8 | instantnoodle | 4.19 | OxygenOS 13.1 | 13 | AnyKernel3 | ReSukiSU | ✅ | ❌ | ✅ | ❌ |
         | OnePlus 8 | instantnoodle | 4.19 | ColorOS 15 | 15 | AnyKernel3 | ReSukiSU | ✅ | ❌ | ✅ | ❌ |
@@ -79,6 +80,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           path: ./downloaded-artifacts
+          merge-multiple: true
           skip-decompress: true
 
       # Get the Latest Tag from GitHub
@@ -106,7 +108,7 @@ jobs:
 
           # Get KernelSU version
           git clone -b master https://github.com/backslashxx/KernelSU.git KernelSU-xxKSU
-          KSU_XXKSU_VERSION=$(cd KernelSU-xxKSU && expr $(/usr/bin/git rev-list --count HEAD) + 30000 - 80)
+          KSU_XXKSU_VERSION=$(cd KernelSU-xxKSU && expr $(/usr/bin/git rev-list --count HEAD) + 30000 - 82)
           git clone -b main https://github.com/rsuntk/KernelSU.git KernelSU-rsuntk
           KSU_RSUNTK_VERSION=$(cd KernelSU-rsuntk && expr $(/usr/bin/git rev-list --count HEAD) + 29971)
           git clone -b builtin https://github.com/ShirkNeko/SukiSU-Ultra.git KernelSU-SukiSU-Ultra
