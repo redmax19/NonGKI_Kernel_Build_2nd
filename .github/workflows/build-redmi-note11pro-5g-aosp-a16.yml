@@ -62,9 +62,9 @@ env:
   SUSFS_FOLDER_FIXED: "redmi_note11pro_5g_aosp_a16" # Fill in your patch prefix directory here. Leave it blank if there isn't one. -> your_folder
   SUSFS_PATCH_FIXED: "susfs_fixed_eplus" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
 
-  REKERNEL_ENABLE: "false" # if u need Re:Kernel.
-  DROIDSPACES_ENABLE: "false" # if u need Droidspaces or LXC/Docker.
-  NOMOUNT_ENABLE: "false" # if u need NoMount.
+  REKERNEL_ENABLE: "true" # if u need Re:Kernel.
+  DROIDSPACES_ENABLE: "true" # if u need Droidspaces or LXC/Docker.
+  NOMOUNT_ENABLE: "true" # if u need NoMount.
 
   HOOK_METHOD: "syscall" # Manual hook method ->  syscall.
 
