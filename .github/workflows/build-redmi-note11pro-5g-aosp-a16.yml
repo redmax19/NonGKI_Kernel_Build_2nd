@@ -12,8 +12,8 @@ env:
   CUSTOM_CMDS : "CROSS_COMPILE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
 
-  KERNEL_SOURCE : "https://github.com/miguelbarretoo/adr3naline_kernel_990.git"
-  KERNEL_BRANCH : "bpf111"
+  KERNEL_SOURCE : "https://github.com/redmax19/android_kernel_samsung_universal9830"
+  KERNEL_BRANCH : "lineage-24.0"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
   CLANG_BRANCH : "lineage-20.0"
@@ -83,7 +83,7 @@ env:
   SKIP_PATCH: "false" # Ignore errors found in Patch Debugger.
 
   BUILD_OTHER_CONFIG: "true" # Merge config files.
-  MERGE_CONFIG_FILES: "x1s.config"
+  MERGE_CONFIG_FILES: "r8s.config"
 
   FREE_MORE_SPACE: "false" # if u want get more space, enabled it.
 
