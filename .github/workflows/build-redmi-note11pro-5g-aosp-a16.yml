@@ -6,8 +6,8 @@ on:
 
 env:
   # Device env
-  DEVICE_NAME : "redmi_note_11_pro_5g"
-  DEVICE_CODENAME : "veux"
+  DEVICE_NAME : "s20_fe"
+  DEVICE_CODENAME : "r8s"
 
   CUSTOM_CMDS : "CROSS_COMPILE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
@@ -64,7 +64,7 @@ env:
 
   REKERNEL_ENABLE: "true" # if u need Re:Kernel.
   DROIDSPACES_ENABLE: "true" # if u need Droidspaces or LXC/Docker.
-  NOMOUNT_ENABLE: "true" # if u need NoMount.
+  NOMOUNT_ENABLE: "false" # if u need NoMount.
 
   HOOK_METHOD: "syscall" # Manual hook method ->  syscall.
 
