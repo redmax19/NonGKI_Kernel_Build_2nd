@@ -729,13 +729,13 @@ index 5e94ec9..9b50196 100644
 +	//   for the sake of performance
 +	if (static_branch_unlikely(&susfs_is_sdcard_android_data_not_decrypted)) {
 +		if (susfs_is_current_ksu_domain()) {
-+			mnt = susfs_alloc_non_unshare_ksu_vfsmnt(name ?:"none");
++			mnt = susfs_alloc_non_unshare_ksu_vfsmnt(fc->source ?:"none");
 +			goto bypass_orig_flow;
 +		}
 +	}
 +#endif // #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 +
- 	mnt = alloc_vfsmnt(name);
+ 	mnt = alloc_vfsmnt(fc->source ?: "none");
 +
 +#ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 +bypass_orig_flow:
