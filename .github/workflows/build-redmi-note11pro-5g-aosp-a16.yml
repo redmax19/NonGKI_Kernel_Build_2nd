@@ -1,4 +1,4 @@
-name: Build Xiaomi Redmi Note 11 Pro 5G (AOSP Based A16)
+name: Build Motorola moto g(9) play (AOSP Based A16)
 
 on:
   workflow_call:
@@ -6,17 +6,17 @@ on:
 
 env:
   # Device env
-  DEVICE_NAME : "redmi_note_11_pro_5g"
-  DEVICE_CODENAME : "veux"
+  DEVICE_NAME : "moto g(9)play"
+  DEVICE_CODENAME : "guamp"
 
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
-  EXTRA_CMDS : "LD=ld.lld"
+  EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
 
-  KERNEL_SOURCE : "https://github.com/LineageOS/android_kernel_motorola_sm6225"
+  KERNEL_SOURCE : "https://github.com/redmax19/kernel_sm6225"
   KERNEL_BRANCH : "lineage-24.0"
 
-  CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
-  CLANG_BRANCH : "lineage-20.0"
+  CLANG_SOURCE : "https://github.com/redmax19/files/releases/download/1/clang-r614150.tar.gz"
+  CLANG_BRANCH : ""
 
   GCC_GNU : false
   GCC_64_SOURCE : "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9.git"
@@ -25,7 +25,7 @@ env:
   GCC_32_BRANCH : "android12L-release"
 
   DEFCONFIG_SOURCE: ""
-  DEFCONFIG_NAME : "vendor/bengal-perf_defconfig"
+  DEFCONFIG_NAME : "guamp_defconfig"
   DEFCONFIG_ORIGIN_IMAGE: ""
   DEFCONFIG_FROM_BOOT: false
 
@@ -84,14 +84,14 @@ env:
   BUILD_DEBUGGER: "false" # Output build errors.
   SKIP_PATCH: "false" # Ignore errors found in Patch Debugger.
 
-  BUILD_OTHER_CONFIG: "true" # Merge config files.
+  BUILD_OTHER_CONFIG: "false" # Merge config files.
   MERGE_CONFIG_FILES: "vendor/debugfs.config,vendor/ext_config/moto-bengal.config,vendor/ext_config/guamp-default.config"
 
   FREE_MORE_SPACE: "false" # if u want get more space, enabled it.
 
 jobs:
   build-kernel:
-    name: Xiaomi Redmi Note 11 Pro 5G (AOSP Based A16)
+    name: Motorola moto g(9) play (AOSP Based A16)
     runs-on: ubuntu-24.04 # u can changed to ubuntu 22.04, and need container set ubuntu-24.04
     # container: archlinux/archlinux:latest # if u need use arch linux -> archlinux/archlinux:latest or ubuntu 20.04 -> ubuntu:focal
     env:
